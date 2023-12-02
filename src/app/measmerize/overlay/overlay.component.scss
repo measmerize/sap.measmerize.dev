@@ -1,0 +1,16 @@
+/* The 'Measmerize Overlay' block custom adjustments */
+.measmerize-add-to-cart {
+  display: block;
+}
+
+.measmerize-button-component {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+
+  @media (min-width: 992px) {
+    padding-inline-end: 20px;
+    padding-bottom: 0;
+    padding-inline-start: 20px;
+  }
+}

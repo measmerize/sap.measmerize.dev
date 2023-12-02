@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  # This builds, and serves the Verdaccio private repository, ready to be used.
+  measmerize-spartacus:
+    image: measmerize/spartacus
+    hostname: measmerize-spartacus
+    networks:
+      - measmerize-network
+    environment:
+      - VERDACCIO_PORT=4873
+    build:
+      context: .
+      dockerfile: Dockerfile-spartacus
+    ports:
+      - "0.0.0.0:4873:4873"
+    restart: always
+
+networks:
+  measmerize-network:
+    driver: bridge

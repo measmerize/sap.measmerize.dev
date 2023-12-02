@@ -1,0 +1,11 @@
+<ng-container *ngIf="product$ | async as product">
+  <!-- Since we hooked/overwrote the 'ProductAddToCartComponent', let's add it back under our button. -->
+  <cx-add-to-cart class="measmerize-add-to-cart"></cx-add-to-cart>
+
+  <div class="measmerize-overlay" class="d-block align-items-center justify-content-between">
+    <!-- Left here to demonstrate that product specific data can be used. <p>Code: {{ product.code }}</p> -->
+    <!-- Feel free to customize the button; Currently using the same style as the rest of the page. -->
+    <measmerize-button class="measmerize-button-component"></measmerize-button>
+  </div>
+</ng-container>
+
